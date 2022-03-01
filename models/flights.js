@@ -37,8 +37,7 @@ const flightSchema = new Schema({
     default: function() {
       return new Date(new Date().setFullYear(new Date().getFullYear() + 1))
     }
-  },
-}, {
+  }, 
   tickets: [ticketSchema]
 }, {
   timestamps: true
