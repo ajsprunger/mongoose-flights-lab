@@ -11,3 +11,11 @@ section div:nth-child(even) {
 button {
   margin-bottom: 15px;
 }
+
+ul {
+  list-style-type: none;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+
