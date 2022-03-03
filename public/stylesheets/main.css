@@ -20,60 +20,69 @@ html {
 }
 
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: gray;
+  /* Use a system font, if none are available use an available sans-sarif font */
+  margin: 0;
+  color: #424748;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main";
+  font-size: 1.8rem;
 }
 
-a {
-  color: #00B7FF;
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8eceb;
+  padding: 20px;
 }
 
-ul.nav {
-  margin:0;
-  padding:0;
-  list-style:none;
-  font-size:13px;
-  height: 26px;
-  line-height: 26px;
+body > main h1:first-child {
+  margin-bottom: 50px;
 }
-.nav li {
-  float:left;
-  border: solid 1px black;
+
+body > nav {
+  grid-area: nav;
+  background-color: #b8c0c2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
 }
-a {
-  display:block;
+
+nav > i {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+nav > a {
+  margin: 20px;
   text-decoration: none;
-  color: black;
-  padding: 0 12px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #424748;
 }
 
-.nav a {
-  padding:0 28px;
+nav > a:visited {
+  color: #424748;
 }
 
-table {
-  table-layout: fixed;
-  border-collapse: collapse;
-  border: solid 1px black;
+nav > a:hover {
+  color: white;
+  background-color: #424748;
 }
 
-thead th:nth-child(1) {
-  width: 95px;
+nav > a.active {
+  color: white;
 }
 
-thead th:nth-child(2) {
-  width: 75px;
-}
-
-thead th:nth-child(3) {
-  width: 120px;
-}
-
-thead th:nth-child(4) {
-  width: 500px;
-}
-
-td {
-  border: 1px solid black;
+.fas::before {
+  font-family: "Font Awesome 5 Free";
 }
 
